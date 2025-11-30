@@ -5,22 +5,24 @@ This document describes the primary user interactions and system behaviors for t
 ## Use Case Diagram
 
 ```mermaid
-usecaseDiagram
-    actor User as "Blind User"
-    actor System as "Smart Cane System"
-    actor Contact as "Emergency Contact"
+flowchart LR
 
-    User --> (Walk with Cane)
-    (Walk with Cane) --> (Detect Obstacle)
-    (Detect Obstacle) --> (Vibrate Cane)
-    
-    User --> (Press Emergency Button)
-    (Press Emergency Button) --> (Get GPS Location)
-    (Get GPS Location) --> (Send SOS SMS)
-    (Send SOS SMS) --> Contact
-    
-    System --> (Monitor Battery)
-    (Monitor Battery) --> (Alert Low Battery)
+actor1(["Blind User"])
+actor2(["Smart Cane System"])
+actor3(["Emergency Contact"])
+
+uc1((Walk with Cane))
+uc2((Detect Obstacle))
+uc3((Vibrate Cane))
+uc4((Press Emergency Button))
+uc5((Get GPS Location))
+uc6((Send SOS SMS))
+uc7((Monitor Battery))
+uc8((Alert Low Battery))
+
+actor1 --> uc1 --> uc2 --> uc3
+actor1 --> uc4 --> uc5 --> uc6 --> actor3
+actor2 --> uc7 --> uc8
 ```
 
 ## Detailed Descriptions
