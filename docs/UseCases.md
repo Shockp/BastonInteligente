@@ -11,16 +11,16 @@ usecaseDiagram
     actor Contact as "Emergency Contact"
 
     User --> (Walk with Cane)
-    (Walk with Cane) --> (Detect Obstacle) : System
-    (Detect Obstacle) --> (Vibrate Cane) : System
+    (Walk with Cane) --> (Detect Obstacle)
+    (Detect Obstacle) --> (Vibrate Cane)
     
     User --> (Press Emergency Button)
-    (Press Emergency Button) --> (Get GPS Location) : System
-    (Get GPS Location) --> (Send SOS SMS) : System
+    (Press Emergency Button) --> (Get GPS Location)
+    (Get GPS Location) --> (Send SOS SMS)
     (Send SOS SMS) --> Contact
     
     System --> (Monitor Battery)
-    (Monitor Battery) --> (Alert Low Battery) : System
+    (Monitor Battery) --> (Alert Low Battery)
 ```
 
 ## Detailed Descriptions

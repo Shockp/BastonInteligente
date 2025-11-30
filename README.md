@@ -19,8 +19,8 @@ BastonInteligente/
 │   ├── Actuators/      # Output modules (Vibration)
 │   ├── Communication/  # Comms modules (GPS, GSM)
 │   ├── Config/         # Configuration files
-│   └── Sensors/        # Input modules (Distance, Battery, Button)
-├── SmartCane.ino       # Main Arduino Sketch
+│   ├── Sensors/        # Input modules (Distance, Battery, Button)
+│   └── SmartCane.ino   # Main Arduino Sketch
 └── README.md           # This file
 ```
 
