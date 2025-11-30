@@ -14,6 +14,7 @@ public:
     VibrationAlert(int pin);
     void init();
     void update(long distance); // Call this in loop
+    bool getMotorState(); // For testing/visualization
 };
 
 #endif

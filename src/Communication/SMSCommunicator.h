@@ -8,10 +8,12 @@ class SMSCommunicator {
 private:
     int rxPin;
     int txPin;
-    SoftwareSerial* gsmSerial;
+    Stream* gsmSerial; // Changed to generic Stream for testing
+    bool isSoftSerial;
 
 public:
     SMSCommunicator(int rx, int tx);
+    SMSCommunicator(Stream& stream); // Constructor for testing
     void init();
     void sendSOS(double lat, double lon);
 };

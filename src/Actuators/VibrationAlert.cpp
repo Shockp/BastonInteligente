@@ -32,3 +32,7 @@ void VibrationAlert::update(long distance) {
         digitalWrite(motorPin, motorState ? HIGH : LOW);
     }
 }
+
+bool VibrationAlert::getMotorState() {
+    return motorState;
+}

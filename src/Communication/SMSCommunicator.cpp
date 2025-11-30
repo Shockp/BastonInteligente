@@ -5,10 +5,18 @@ SMSCommunicator::SMSCommunicator(int rx, int tx) {
     rxPin = rx;
     txPin = tx;
     gsmSerial = new SoftwareSerial(rxPin, txPin);
+    isSoftSerial = true;
+}
+
+SMSCommunicator::SMSCommunicator(Stream& stream) {
+    gsmSerial = &stream;
+    isSoftSerial = false;
 }
 
 void SMSCommunicator::init() {
-    gsmSerial->begin(GSM_BAUD);
+    if (isSoftSerial) {
+        ((SoftwareSerial*)gsmSerial)->begin(GSM_BAUD);
+    }
     delay(1000); // Wait for module to stabilize
 }
 
