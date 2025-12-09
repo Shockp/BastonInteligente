@@ -4,19 +4,19 @@
 // --- Pin Definitions (Placeholders - Update when wiring is confirmed) ---
 
 // Distance Sensor (HC-SR04)
-#define PIN_TRIG 9
-#define PIN_ECHO 10
+#define PIN_TRIG 5
+#define PIN_ECHO 6
 
 // Vibration Motor
-#define PIN_VIBRATION 6  // Must be a PWM pin for intensity control if needed, or just digital for pulsing
+#define PIN_VIBRATION 7  // Must be a PWM pin for intensity control if needed, or just digital for pulsing
 
 // GPS Module (NEO6M) - using SoftwareSerial
 #define PIN_GPS_RX 4
 #define PIN_GPS_TX 3
 
 // GSM Module (SIM800L) - using SoftwareSerial
-#define PIN_GSM_RX 7
-#define PIN_GSM_TX 8
+#define PIN_GSM_RX 11
+#define PIN_GSM_TX 10
 
 // Battery Monitor
 #define PIN_BATTERY A0
